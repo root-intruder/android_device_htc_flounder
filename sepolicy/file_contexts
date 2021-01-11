@@ -119,7 +119,7 @@
 /dev/block/platform/sdhci-tegra\.3/by-name/MSC u:object_r:misc_block_device:s0
 
 # secure os storage
-/data/ss(/.*)?                         u:object_r:tee_data_file:s0
+#/data/ss(/.*)?                         u:object_r:tee_data_file:s0
 
 # tlk_daemon
 /vendor/bin/tlk_daemon                 u:object_r:tee_exec:s0

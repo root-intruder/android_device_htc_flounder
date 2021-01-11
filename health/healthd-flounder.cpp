@@ -21,6 +21,7 @@
 #include <cutils/klog.h>
 #include <sys/types.h>
 #include <sys/sysinfo.h>
+#include <unistd.h>
 
 /* Nominal voltage for ENERGY_COUNTER computation */
 #define VOLTAGE_NOMINAL 3.7

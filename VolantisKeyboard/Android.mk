@@ -34,13 +34,15 @@ LOCAL_MODULE := validate_volantis_keymaps
 intermediates := $(call intermediates-dir-for,ETC,$(LOCAL_MODULE),,COMMON)
 LOCAL_BUILT_MODULE := $(intermediates)/stamp
 
+
 validatekeymaps := $(HOST_OUT_EXECUTABLES)/validatekeymaps$(HOST_EXECUTABLE_SUFFIX)
 volantis_keymaps := $(wildcard $(LOCAL_PATH)/res/raw/*.kcm)
 $(LOCAL_BUILT_MODULE): PRIVATE_VALIDATEKEYMAPS := $(validatekeymaps)
 $(LOCAL_BUILT_MODULE) : $(volantis_keymaps) | $(validatekeymaps)
 	$(hide) $(PRIVATE_VALIDATEKEYMAPS) $^
-	$(hide) mkdir -p $(dir $@) && touch $@
+	#$(hide) mkdir -p $(dir $@) && touch $@
 
+.PHONY : droidcore all_modules
 # Run validatekeymaps unconditionally for platform build.
 droidcore all_modules : $(LOCAL_BUILT_MODULE)
 

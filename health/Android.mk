@@ -21,7 +21,7 @@ LOCAL_MODULE := libhealthd.flounder
 
 LOCAL_MODULE_TAGS := optional
 
-LOCAL_C_INCLUDES := system/core/healthd/include system/core/base/include
+LOCAL_C_INCLUDES := system/core/healthd/include system/core/base/include frameworks/native/services/batteryservice/include
 
 LOCAL_STATIC_LIBRARIES := libcutils
 
